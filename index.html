@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <main class="container">
+        <header class="main-title">
+            <h1>Temperature Converter By Federigo Shallom</h1>
+        </header>
+
+        <section class="main-section">
+            <section class="instruction">
+                <p>Input the temperature in Fahrenheit (&deg;F) below, then select the conversion type and click the <b>Convert</b> button.</p>
+            </section>
+            
+            <form onsubmit="convert(); return false;">
+                <section class="section-input">
+                    <article>
+                        <input id="input-fahrenheit" placeholder="Input temperature in Fahrenheit" pattern="-?\d+(\.\d+)?" required title="Input should be a number">
+                        <select id="conversion-type">
+                            <option value="celsius">Celsius (&deg;C)</option>
+                            <option value="kelvin">Kelvin (K)</option>
+                            <option value="reaumur">Réaumur (°Ré)</option>
+                        </select>
+                        <button id="button-convert">Convert</button>
+                        <button id="button-reset" onclick="reset()">Reset</button>
+                    </article>
+                </section>
+            </form>
+            
+            <section class="section-result">
+                <header>
+                    <h3>Result</h3>
+                </header>
+                <article>
+                    <textarea id="result" rows="1" readonly></textarea>
+                </article>
+            </section>
+
+            <section class="section-method">
+                <header>
+                    <h3>Calculation Method</h3>
+                </header>
+                <article>
+                    <textarea id="method-output" rows="3" readonly></textarea>
+                </article>
+            </section>
+            
+            <section class="section-explanation">
+                <header>
+                    <h3>Cara konversi dari (&deg;C) ke Fahrenheit(&deg;F)</h3>
+                </header>
+                <hr style="border: 2px solid #990011;">
+                <article>
+
+                    <p class="formula-desc">suhu
+                        <span class="symbol">
+                            <i>S</i>
+                        </span>
+                        
+                        dalam derajat Fahrenheit (&deg;F) sama dengan
+                        suhu 
+                        <span>
+                            S
+                        </span>
+                        dalam derajat celsius(&deg;C) kali 9/5 tambah 32.</p>
+                    
+                    <h1 class="formula-s">S <sub>(&deg;F)</sub> = (S <sub>(&deg;C)</sub> × 9/5) &#43; 32</h1>
+                    <p>atau</p>
+                    <h1 class="formula-s">S <sub>(&deg;F)</sub> = (S <sub>(&deg;C)</sub> × 1.8) + 32</h1>
+                </article>
+            </section>
+            <br><br><br><br>
+        </section>
+    </main>
+</body>
+
+</html>
